@@ -115,6 +115,23 @@
   line-height: 1.5;
 }
 
+.back-button {
+  background: transparent;
+  border: 1px solid #667eea;
+  color: #667eea;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: #667eea;
+  color: white;
+}
+
 .loading-app {
   display: flex;
   justify-content: center;
