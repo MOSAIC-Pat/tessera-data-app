@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Login from './components/Login';
 import SalesAnalytics from './components/SalesAnalytics';
+import SalesForecast from './components/SalesForecast';
 import './App.css';
 
 interface User {
@@ -99,13 +100,7 @@ function App() {
         )}
 
         {activeModule === 'sales-forecast' && (
-          <div className="main-container">
-            <button onClick={() => setActiveModule('dashboard')} className="back-button">
-              ← Back to Dashboard
-            </button>
-            <h2>Sales Forecast</h2>
-            <p>Sales forecast module coming soon...</p>
-          </div>
+          <SalesForecast onBack={() => setActiveModule('dashboard')} />
         )}
 
         {activeModule === 'demand-planning' && (
