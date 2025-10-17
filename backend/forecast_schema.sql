@@ -34,10 +34,10 @@ CREATE TABLE raw_tenant_data.forecast_data (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     forecast_id UUID NOT NULL REFERENCES raw_tenant_data.forecasts(id) ON DELETE CASCADE,
 
-    -- Dimension keys
-    product_id UUID, -- References products table
-    location_id UUID, -- References locations table
-    customer_id UUID, -- References customers table (optional)
+    -- Dimension keys (using external IDs from tenant_sales)
+    product_id TEXT, -- Product external ID
+    location_id TEXT, -- Location external ID
+    customer_id TEXT, -- Customer external ID (optional)
 
     -- Time dimension
     forecast_date DATE NOT NULL,
